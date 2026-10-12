@@ -1,0 +1,14 @@
+# dbt (Rutas relativas considerando la carpeta interna)
+03_revenue_dbt/revenue_project/target/
+03_revenue_dbt/revenue_project/dbt_packages/
+03_revenue_dbt/revenue_project/logs/
+03_revenue_dbt/revenue_project/profiles.yml
+
+# Archivos de configuración locales y variables de entorno
+.env
+03_revenue_dbt/revenue_project/.env
+
+# Jupyter Notebook (Python)
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+__pycache__/
