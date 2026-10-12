@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_accounts
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+
+  - name: stg_products
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+
+  - name: int_orders_valid
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+
+  - name: int_orders_enriched
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: order_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['OPEN', 'SHIPPED', 'CANCELLED']
+      - name: region
+        tests: [not_null]
+
+  - name: mart_revenue_performance
+    columns:
+      - name: month_start
+        tests: [not_null]
+      - name: region
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]

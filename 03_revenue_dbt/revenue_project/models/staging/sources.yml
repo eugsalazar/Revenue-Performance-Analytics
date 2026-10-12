@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: REVENUE_DB
+    schema: RAW
+    tables:
+      - name: oracle_orders
+      - name: salesforce_accounts
+      - name: adaptive_forecast
+      - name: product_master
